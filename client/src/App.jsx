@@ -17,7 +17,7 @@ function App() {
 
   const fetchBotResponse = async () => {
     const { data } = await axios.post(
-      "http://localhost:4000",
+      "https://chat-g-pt-open-ai-ff9t.vercel.app",
       // "http://localhost:5173",
       
       { input },
