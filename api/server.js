@@ -6,7 +6,13 @@ import OpenAI from "openai";
 dotenv.config();
 const port = 5000 || process.env.PORT
 const app = express();
-app.use(cors());
+app.use(cors(
+  {
+    origin:['https://chat-g-pt-open-ai-ff9t.vercel.app'],
+    methods:["POST","GET"],
+    credentials:true
+  }
+));
 app.use(express.json());
 
 app.get("/", async (req, res) => {
