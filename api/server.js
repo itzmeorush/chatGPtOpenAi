@@ -4,7 +4,7 @@ import * as dotenv from "dotenv";
 import OpenAI from "openai";
 
 dotenv.config();
-
+const port = 4000 || process.env.PORT
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -48,4 +48,4 @@ app.post("/", async (req, res) => {
   }
 });
 
-app.listen(4000, () => console.log("Server is running on port 4000"));
+app.listen(port, () => console.log("Server is running on port 4000"));
