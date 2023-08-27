@@ -9,7 +9,7 @@ import axios from "axios";
 function App() {
   const [input, setInput] = useState("");
   const [posts, setPosts] = useState([]);
-
+axios.defaults.withCredentials = true;
   useEffect(() => {
     document.querySelector(".layout").scrollTop =
       document.querySelector(".layout").scrollHeight;
